@@ -10,7 +10,7 @@ import SwiftUI
 extension Text {
     func bigLight() -> some View {
         font(.system(size: 80))
-            .fontWeight(.thin)
+            .fontWeight(.bold)
             .multilineTextAlignment(.center)
             .foregroundColor(.white)
     }
@@ -26,8 +26,9 @@ struct LinearGradientView: View {
                                  .blue, .black]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing)
-            Text("Linear Gradient")
-                .bigLight()
+            .mask(Text("Linear Gradient")
+                .bigLight())
+            
         }
     }
 }
